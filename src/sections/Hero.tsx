@@ -1,9 +1,9 @@
 import emojiImage from "@/assets/images/emoji-computer.png";
 import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
+import { ArrowDown } from "lucide-react";
 import grainImage from "@/assets/images/grain.jpg";
-import StarIcon from "@/assets/icons/star.svg";
-import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { Sparkle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { HeroOrbit } from "@/components/HeroOrbit";
 export const HeroSection = () => {
   return (
@@ -18,53 +18,25 @@ export const HeroSection = () => {
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
         <HeroOrbit size={800} rotation={-72}>
-          <Image
-            src={StarIcon}
-            alt="star icon"
-            className="size-28 text-emerald-300"
-          />
+          <Sparkle className="size-24 text-transparent fill-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={550} rotation={20}>
-          <Image
-            src={StarIcon}
-            alt="star icon"
-            className="size-12 text-emerald-300"
-          />
+          <Sparkle className="size-12 text-transparent fill-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={590} rotation={98}>
-          <Image
-            src={StarIcon}
-            alt="star icon"
-            className="size-8 text-emerald-300"
-          />
+          <Sparkle className="size-8 text-transparent fill-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-14}>
-          <Image
-            src={SparkleIcon}
-            alt="star icon"
-            className="size-8 text-emerald-300/20"
-          />
+          <Sparkles className="size-8 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
         </HeroOrbit>
         <HeroOrbit size={440} rotation={79}>
-          <Image
-            src={SparkleIcon}
-            alt="star icon"
-            className="size-5 text-emerald-300/20"
-          />
+          <Sparkles className="size-5 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
         </HeroOrbit>
         <HeroOrbit size={530} rotation={178}>
-          <Image
-            src={SparkleIcon}
-            alt="star icon"
-            className="size-10 text-emerald-300/20"
-          />
+          <Sparkles className="size-10 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
         </HeroOrbit>
         <HeroOrbit size={710} rotation={144}>
-          <Image
-            src={SparkleIcon}
-            alt="star icon"
-            className="size-14 text-emerald-300/20"
-          />
+          <Sparkles className="size-14 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
         </HeroOrbit>
         <HeroOrbit size={720} rotation={85}>
           <div className="size-3 rounded-full bg-emerald-300/20" />
@@ -76,7 +48,7 @@ export const HeroSection = () => {
           <div className="size-2 rounded-full bg-emerald-300/20" />
         </HeroOrbit>
       </div>
-      <div>
+      <div className="container">
         <div className="flex flex-col items-center">
           <Image
             src={emojiImage}
@@ -102,7 +74,8 @@ export const HeroSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-emerald-300/50 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
-            <Image src={ArrowDown} alt="Arrow Down" className="size-4" />
+            {/* <Image src={ArrowDown} alt="Arrow Down" className="size-4" /> */}
+            <ArrowDown className="size-4" />
           </button>
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             <span className="text-lg">👋</span>
