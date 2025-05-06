@@ -48,7 +48,7 @@ export const HeroSection = () => {
           <div className="size-2 rounded-full bg-emerald-300/20" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container p-0">
         <div className="flex flex-col items-center">
           <Image
             src={emojiImage}
@@ -72,9 +72,8 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-emerald-300/50 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            {/* <Image src={ArrowDown} alt="Arrow Down" className="size-4" /> */}
+          <button className="inline-flex items-center gap-2 border-1 border-white px-6 h-12 rounded-xl">
+            <span className="font-semibold text-white">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">

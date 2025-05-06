@@ -1,42 +1,113 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import emojiAvatar1 from "@/assets/images/emoji-avatar-1.png";
+import emojiAvatar2 from "@/assets/images/emoji-avatar-2.png";
+import emojiAvatar3 from "@/assets/images/emoji-avatar-3.png";
+import emojiAvatar4 from "@/assets/images/emoji-avatar-4.png";
+import emojiAvatar5 from "@/assets/images/emoji-avatar-5.png";
+import emojiAvatar6 from "@/assets/images/emoji-avatar-6.png";
+import emojiAvatar7 from "@/assets/images/emoji-avatar-7.png";
+import emojiAvatar8 from "@/assets/images/emoji-avatar-8.png";
+import emojiAvatar9 from "@/assets/images/emoji-avatar-9.png";
+import { SectionHeader } from "@/components/SectionHeader";
+import Image from "next/image";
+import { Card } from "@/components/Card";
 
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
+    name: "Sophie Müller",
+    position: "Project Manager @ BrightWorks",
+    text: "Great work and fast delivery. Highly recommended! Communication was clear throughout the project. Would definitely collaborate again.",
+    avatar: emojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
+    name: "Lucas Smith",
+    position: "Developer @ CodeBase",
+    text: "Very professional and easy to work with. The project was completed on time and met all requirements. I appreciate the attention to detail.",
+    avatar: emojiAvatar2,
   },
   {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
+    name: "James Wilson",
+    position: "CTO @ NextGen",
+    text: "Quick turnaround and solid code. The implementation was efficient and reliable. Support after delivery was excellent.",
+    avatar: emojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
+    name: "Benjamin Clark",
+    position: "Engineer @ TechFlow",
+    text: "Smooth process from start to finish. All questions were answered promptly. The final product exceeded expectations.",
+    avatar: emojiAvatar4,
   },
   {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
+    name: "Olivia Brown",
+    position: "Marketing Lead @ AdVision",
+    text: "Fantastic job, met all our needs. The team was responsive and proactive. We saw great results from the project.",
+    avatar: emojiAvatar5,
+  },
+  {
+    name: "Ethan Miller",
+    position: "CEO @ StartUpHub",
+    text: "Delivered exactly what we wanted. The process was transparent and updates were frequent. Highly recommend for any project.",
+    avatar: emojiAvatar6,
+  },
+  {
+    name: "Emma Davis",
+    position: "Designer @ PixelArt",
+    text: "Loved the results. Will hire again! The design process was smooth and feedback was always welcomed.",
+    avatar: emojiAvatar7,
+  },
+  {
+    name: "Henry Walker",
+    position: "Lead Dev @ AppForge",
+    text: "Great communication and skills. The project was delivered ahead of schedule. Collaboration was seamless and productive.",
+    avatar: emojiAvatar8,
+  },
+  {
+    name: "William Harris",
+    position: "Manager @ BuildRight",
+    text: "Very satisfied with the outcome. The work was thorough and well-documented. Would work together again in the future.",
+    avatar: emojiAvatar9,
   },
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div className="py-16 lg:py-24">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Happy Client"
+          title="What Clients Say About Me"
+          description="Don't just take my word for it. See what my clients have to say about my
+        work."
+        />
+        <div className="mt-16 lg:mt-24 flex overflow-x-clip mask-x-from-90%">
+          <div className="flex gap-8 flex-none">
+            {testimonials.map((testimonial) => (
+              <Card
+                key={testimonial.name}
+                className="max-w-xs md:p-8 md:max-w-md"
+              >
+                <div className="flex gap-4 items-center">
+                  <div className="size-14 bg-gray-700 inline-flex rounded-full items-center justify-center overflow-hidden shrink-0">
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="size-10 max-h-full"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-white/40">
+                      {testimonial.position}
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 md:mt-6 text-sm md:text-base">
+                  {testimonial.text}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
