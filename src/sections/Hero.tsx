@@ -5,6 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import { Sparkle } from "lucide-react";
 import { Sparkles } from "lucide-react";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { SparkleIcon, StarIcon } from "@/components/Icons";
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
@@ -18,25 +19,25 @@ export const HeroSection = () => {
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
         <HeroOrbit size={800} rotation={-72}>
-          <Sparkle className="size-24 text-transparent fill-emerald-300" />
+          <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={550} rotation={20}>
-          <Sparkle className="size-12 text-transparent fill-emerald-300" />
+          <StarIcon className="size-12 text-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={590} rotation={98}>
-          <Sparkle className="size-8 text-transparent fill-emerald-300" />
+          <StarIcon className="size-8 text-emerald-300" />
         </HeroOrbit>
         <HeroOrbit size={430} rotation={-14}>
-          <Sparkles className="size-8 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
+          <SparkleIcon className="size-8 text-emerald-300/40" />
         </HeroOrbit>
         <HeroOrbit size={440} rotation={79}>
-          <Sparkles className="size-5 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
+          <SparkleIcon className="size-5 text-emerald-300/30" />
         </HeroOrbit>
         <HeroOrbit size={530} rotation={178}>
-          <Sparkles className="size-10 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
+          <SparkleIcon className="size-10 text-emerald-300/30" />
         </HeroOrbit>
         <HeroOrbit size={710} rotation={144}>
-          <Sparkles className="size-14 text-emerald-300/30 fill-emerald-300/30 stroke-1" />
+          <SparkleIcon className="size-14 text-emerald-300/30" />
         </HeroOrbit>
         <HeroOrbit size={720} rotation={85}>
           <div className="size-3 rounded-full bg-emerald-300/20" />
