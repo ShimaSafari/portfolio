@@ -8,6 +8,14 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
+    company: "Freelance niniBits",
+    year: "2025",
+    title: "ECommerce for Babies",
+    technology: [{ item: "React.js" }, { item: "Material UI" }],
+    link: "https://github.com/ShimaSafari/BabyLine",
+    image: BabyLine,
+  },
+  {
     company: "Thesis Project",
     year: "2024",
     title: "AI Resume Builder",
@@ -21,14 +29,6 @@ const portfolioProjects = [
     link: "https://github.com/ShimaSafari/ai-resume-builder",
     image: AIResumeBuilder,
   },
-  {
-    company: "Freelance niniBits",
-    year: "2025",
-    title: "ECommerce for Babies",
-    technology: [{ item: "React.js" }, { item: "Material UI" }],
-    link: "https://github.com/ShimaSafari/BabyLine",
-    image: BabyLine,
-  },
 ];
 
 export const ProjectsSection = () => {
@@ -41,10 +41,13 @@ export const ProjectsSection = () => {
           description=" See how I transformed concepts into engaging digital exeperiences."
         />
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{
+                top: `calc(64px + ${index * 40}px)`,
+              }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
