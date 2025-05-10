@@ -43,7 +43,7 @@
   padding-inline: 1rem;
   @variant md {
     padding-inline: 2rem;
-  }
+  } 
   @variant lg {
     max-width: 64rem;
   }
