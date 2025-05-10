@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import grainImage from "@/assets/images/grain.jpg";
+import Link from "next/link";
 export const ContactSection = () => {
   return (
     <div className="py-16 pt-14 lg:py-24 lg:pt-20">
@@ -20,10 +21,12 @@ export const ContactSection = () => {
               </p>
             </div>
             <div>
-              <button className="text-white bg-gray-950 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border  border-gray-900">
-                <span className="font-semibold">Contact Me</span>
-                <ArrowUpRight className="size-4" />
-              </button>
+              <Link href="mailto:shimasafarimg@gmail.com">
+                <button className="text-white bg-gray-950 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border  border-gray-900">
+                  <span className="font-semibold">Contact Me</span>
+                  <ArrowUpRight className="size-4" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
