@@ -17,7 +17,7 @@ const footerLink = [
 ];
 export const Footer = () => {
   return (
-    <footer className="relative -z-10 overflow-x-clip">
+    <footer className="relative overflow-x-clip">
       <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -z-10 -translate-x-1/2 bg-emerald-300/30 mask-radial-[50%_50%] mask-radial-at-[bottom_center] mask-radial-from-black mask-radial-to-transparent"></div>
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row items-center md:justify-between gap-8">

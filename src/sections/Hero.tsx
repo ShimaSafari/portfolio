@@ -1,13 +1,15 @@
+"use client";
 import emojiImage from "@/assets/images/emoji-computer.png";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { Download, Mouse } from "lucide-react";
 import grainImage from "@/assets/images/grain.jpg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { SparkleIcon, StarIcon } from "@/components/Icons";
+import { motion } from "framer-motion";
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -96,11 +98,16 @@ export const HeroSection = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="container"
+      >
         <div className="flex flex-col items-center">
           <Image
             src={emojiImage}
-            className="size-[100px]"
+            className="size-[80px]"
             alt="Person peeking from behind a laptop"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
@@ -117,21 +124,35 @@ export const HeroSection = () => {
             Building Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional,
-            high-performing web applications. Let's discuss your next project.
+            I specialize in transforming designs into functional, beautiful web
+            applications. Let's discuss your next project.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border-1 border-white px-6 h-12 rounded-xl">
+          <motion.a
+            href="#projects"
+            className="inline-flex items-center gap-2 border-1 border-white px-6 h-12 rounded-xl"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
             <span className="font-semibold text-white">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span className="text-lg">👋</span>
-            <span className="font-semibold">Let's Connect</span>
-          </button>
+            <Mouse className="size-4" />
+          </motion.a>
+          <motion.a
+            href="https://drive.google.com/uc?export=download&id=145qT7GJ7zvfJi-2O9CiW2a88eMP55zcG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <Download className="size-4" />
+            <span className="font-semibold">Download Resume</span>
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
