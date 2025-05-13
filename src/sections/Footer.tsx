@@ -1,5 +1,4 @@
 import { Heart, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 const footerLink = [
   {
@@ -28,14 +27,14 @@ export const Footer = () => {
           </div>
           <nav className="flex flex-col md:flex-row items-center gap-8">
             {footerLink.map((link) => (
-              <Link
+              <a
                 href={link.href}
                 key={link.title}
                 className="inline-flex items-center gap-1.5"
               >
                 <span className="font-semibold">{link.title}</span>
                 <ArrowUpRight className="size-4" />
-              </Link>
+              </a>
             ))}
           </nav>
         </div>

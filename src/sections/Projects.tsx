@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import AIResumeBuilder from "@/assets/images/aiResumeBuilder-landing.png";
 import BabyLine from "@/assets/images/ninibits-landing.png";
 import { BadgeCheck } from "lucide-react";
@@ -13,6 +12,7 @@ const portfolioProjects = [
     title: "ECommerce for Babies",
     technology: [{ item: "React.js" }, { item: "Material UI" }],
     link: "https://github.com/ShimaSafari/BabyLine",
+    appLink: "https://babyline-ecommerce-react-mui.vercel.app/",
     image: BabyLine,
   },
   {
@@ -27,6 +27,7 @@ const portfolioProjects = [
       { item: "Google Gemini API" },
     ],
     link: "https://github.com/ShimaSafari/ai-resume-builder",
+    appLink: "https://github.com/ShimaSafari/ai-resume-builder",
     image: AIResumeBuilder,
   },
 ];
@@ -72,12 +73,20 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6">
-                      <span>View Source Code</span>
-                      <ArrowUpRight className="size-5" />
-                    </button>
-                  </Link>
+                  <a
+                    href={project.appLink}
+                    className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6"
+                  >
+                    <span>View Live Site</span>
+                    <ArrowUpRight className="size-5" />
+                  </a>
+                  <a
+                    href={project.link}
+                    className="text-white h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6 md:ml-2"
+                  >
+                    <span>Source Code</span>
+                    <ArrowUpRight className="size-5" />
+                  </a>
                 </div>
                 <div className="relative">
                   <Image
