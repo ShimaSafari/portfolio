@@ -1,6 +1,6 @@
 import Image from "next/image";
-import AIResumeBuilder from "@/assets/images/aiResumeBuilder-landing.png";
-import BabyLine from "@/assets/images/ninibits-landing.png";
+import AIResumeBuilder from "@/assets/images/landingPage-AIResume.png";
+import BabyLineStore from "@/assets/images/landingPage-ninibits.png";
 import { BadgeCheck } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -10,10 +10,16 @@ const portfolioProjects = [
     company: "Freelance niniBits",
     year: "2025",
     title: "ECommerce for Babies",
-    technology: [{ item: "React.js" }, { item: "Material UI" }],
+    technology: [
+      { item: "Vite" },
+      { item: "React.js" },
+      { item: "Context API" },
+      { item: "Material UI" },
+      { item: "Slick Carousel" },
+    ],
     link: "https://github.com/ShimaSafari/BabyLine",
     appLink: "https://babyline-ecommerce-react-mui.vercel.app/",
-    image: BabyLine,
+    image: BabyLineStore,
   },
   {
     company: "Thesis Project",
@@ -22,12 +28,12 @@ const portfolioProjects = [
     technology: [
       { item: "React.js" },
       { item: "Shadcn UI" },
-      { item: "Starpi CMS" },
+      { item: "Starpi - Supabase" },
       { item: "Clerk Authentication" },
       { item: "Google Gemini API" },
     ],
     link: "https://github.com/ShimaSafari/ai-resume-builder",
-    appLink: "https://github.com/ShimaSafari/ai-resume-builder",
+    appLink: "https://ai-resume-builder-react-shadcn.vercel.app/",
     image: AIResumeBuilder,
   },
 ];
@@ -47,7 +53,7 @@ export const ProjectsSection = () => {
               key={project.title}
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
               style={{
-                top: `calc(64px + ${index * 40}px)`,
+                top: `calc(64px + ${index * 100}px)`,
               }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
@@ -75,6 +81,7 @@ export const ProjectsSection = () => {
                   </ul>
                   <a
                     href={project.appLink}
+                    target="_blank"
                     className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6"
                   >
                     <span>View Live Site</span>
@@ -82,6 +89,7 @@ export const ProjectsSection = () => {
                   </a>
                   <a
                     href={project.link}
+                    target="_blank"
                     className="text-white h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6 md:ml-2"
                   >
                     <span>Source Code</span>
@@ -92,7 +100,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 rounded-t-xl md:rounded-t-3xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
