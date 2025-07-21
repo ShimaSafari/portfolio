@@ -14,9 +14,9 @@ import { Fragment } from "react";
 
 const testimonials = [
   {
-    name: "Sophie Müller",
-    position: "Project Manager @ BrightWorks",
-    text: "Great work and fast delivery. Highly recommended! Communication was clear throughout the project. Would definitely collaborate again.",
+    name: "Sanaz Shahraeni",
+    position: "Head of IT Department at University of ACECR",
+    text: "The experience of working with Shima was outstanding. She completed the work with incredible precision and responsibility. I will definitely collaborate with her on future projects.",
     avatar: emojiAvatar1,
   },
   {

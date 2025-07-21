@@ -1,18 +1,34 @@
 import Image from "next/image";
 import AIResumeBuilder from "@/assets/images/landingPage-AIResume.png";
 import BabyLineStore from "@/assets/images/landingPage-ninibits.png";
+import TaskMangerDashboard from "@/assets/images/landingPage-TaskMangerDashboard.png";
 import { BadgeCheck } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
+    company: "Freelance",
+    year: "2025",
+    title: "Task Manager Dashboard",
+    technology: [
+      { item: "Next.js" },
+      { item: "TypeScript" },
+      { item: "Shadcn UI" },
+      { item: "Tailwind CSS" },
+      { item: "Context REST API - SWR" },
+    ],
+    link: "https://github.com/ShimaSafari/Task-Management-Dashboard",
+    appLink: "https://task-management-dashboard-next-ts-shadcn-shima-safari-team.vercel.app/",
+    image: TaskMangerDashboard,
+  },
+  {
     company: "Freelance niniBits",
     year: "2025",
     title: "ECommerce for Babies",
     technology: [
-      { item: "Vite" },
       { item: "React.js" },
+      { item: "JavaScript" },
       { item: "Context API" },
       { item: "Material UI" },
       { item: "Slick Carousel" },
@@ -28,7 +44,7 @@ const portfolioProjects = [
     technology: [
       { item: "React.js" },
       { item: "Shadcn UI" },
-      { item: "Starpi - Supabase" },
+      { item: "Strapi - Supabase" },
       { item: "Clerk Authentication" },
       { item: "Google Gemini API" },
     ],
