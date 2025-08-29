@@ -2,13 +2,29 @@ import Image from "next/image";
 import AIResumeBuilder from "@/assets/images/landingPage-AIResume.png";
 import BabyLineStore from "@/assets/images/landingPage-ninibits.png";
 import TaskMangerDashboard from "@/assets/images/landingPage-TaskMangerDashboard.png";
+import RestcountriesApp from "@/assets/images/landingPage-restcountries.png";
 import { BadgeCheck } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
-    company: "Freelance",
+    company: "Personal Project",
+    year: "2025",
+    title: "Rest Countries app",
+    technology: [
+      { item: "Next.js" },
+      { item: "TypeScript" },
+      { item: "Shadcn UI" },
+      { item: "Tailwind CSS" },
+      { item: "Context RESTAPI" },
+    ],
+    link: "https://github.com/ShimaSafari/restcountries-app",
+    appLink: "https://restcountries-next-ts-shadcn.vercel.app/",
+    image: RestcountriesApp,
+  },
+  {
+    company: "Personal Project",
     year: "2025",
     title: "Task Manager Dashboard",
     technology: [
@@ -16,10 +32,11 @@ const portfolioProjects = [
       { item: "TypeScript" },
       { item: "Shadcn UI" },
       { item: "Tailwind CSS" },
-      { item: "Context REST API - SWR" },
+      { item: "Context RESTAPI - SWR" },
     ],
     link: "https://github.com/ShimaSafari/Task-Management-Dashboard",
-    appLink: "https://task-management-dashboard-next-ts-shadcn-shima-safari-team.vercel.app/",
+    appLink:
+      "https://task-management-dashboard-next-ts-shadcn-shima-safari-team.vercel.app/",
     image: TaskMangerDashboard,
   },
   {
