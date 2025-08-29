@@ -192,11 +192,11 @@ export const AboutSection = () => {
               />
               <div className="absolute flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-18 rounded-full after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <div className="absolute inset-0 -z-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 animate-ping [animation-duration:2s]"></div>
-                <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400"></div>
+                <div className="absolute  inset-0 -z-10 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400"></div>
                 <Image
                   src={emojiSmile}
                   alt="Smiling emoji"
-                  className="size-14"
+                  className="size-14 rounded-full"
                 />
               </div>
             </Card>

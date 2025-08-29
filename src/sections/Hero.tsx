@@ -1,5 +1,5 @@
 "use client";
-import emojiImage from "@/assets/images/emoji-computer.png";
+import emojiWork from "@/assets/images/emoji-work.png";
 import Image from "next/image";
 import { Download, Mouse } from "lucide-react";
 import grainImage from "@/assets/images/grain.jpg";
@@ -106,7 +106,7 @@ export const HeroSection = () => {
       >
         <div className="flex flex-col items-center">
           <Image
-            src={emojiImage}
+            src={emojiWork}
             className="size-[80px]"
             alt="Person peeking from behind a laptop"
           />
@@ -124,8 +124,8 @@ export const HeroSection = () => {
             I&apos;m Shima Safari
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional, beautiful web
-            applications. Let&apos;s discuss your next project.
+            I craft modern websites that blend design with functionality.
+            Let&apos;s build something amazing together.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
